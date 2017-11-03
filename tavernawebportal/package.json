@@ -1,0 +1,27 @@
+{
+  "name": "taverna",
+  "version": "1.0.0",
+  "description": "A site for Taverna.cat",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "material-components-web": "^0.24.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diliondani/taverna.git"
+  },
+  "keywords": [
+    "golang",
+    "go"
+  ],
+  "author": "Dilion Dani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diliondani/taverna/issues"
+  },
+  "homepage": "https://github.com/diliondani/taverna#readme"
+}
