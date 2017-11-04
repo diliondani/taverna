@@ -1,0 +1,64 @@
+{{define "head"}}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script defer src="public/js/regular.min.js"></script>
+    <script defer src="public/js/light.min.js"></script>
+    <script defer src="public/js/solid.min.js"></script>
+    <script defer src="public/js/brands.min.js"></script>
+    <script defer src="public/js/fontawesome.min.js"></script>
+    <title>Catalan Resturant Blanes Costa Brava | Cuina Tradicional</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <link 
+        rel="stylesheet"
+        href="public/css/style.css" />
+    <style>
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .element-card {
+        width: 16em;
+        margin: 16px;
+      }
+
+      .element-card > .mdc-card__media {
+        height: 9em;
+      }
+
+      #demo-absolute-fab {
+        position: fixed;
+        top: 7rem;
+        right: 1rem;
+        z-index: 1;
+      }
+      .element-card.earth {
+        --mdc-theme-primary: #795548;
+        --mdc-theme-text-primary-on-primary: var(--mdc-theme-text-primary-on-dark);
+        }
+
+        .element-card.wind {
+        --mdc-theme-primary: #9e9e9e;
+        --mdc-theme-text-primary-on-primary: var(--mdc-theme-text-primary-on-light);
+        }
+
+        .element-card.fire {
+        --mdc-theme-primary: #f44336;
+        --mdc-theme-text-primary-on-primary: var(--mdc-theme-text-primary-on-dark);
+        }
+
+        .element-card.water {
+        --mdc-theme-primary: #00bcd4;
+        --mdc-theme-text-primary-on-primary: var(--mdc-theme-text-primary-on-light);
+        }
+        .mdc-toolbar-fixed-adjust {
+            margin-top: 74px;
+        }
+    </style>
+  </head>
+
+  {{end}}

@@ -1,13 +1,11 @@
-@import "@material/button/mixins";
+// My main Sass file.
+$crimson: #8d230F;
+$forest: #1e434c;
+$rust: #9b4f0f;
+$gold: #c99e10;
+$mdc-theme-primary: $crimson;
+$mdc-theme-secondary: $gold;
+$mdc-theme-background: #fff;
 
-.mdc-button.mdc-button--raised {
-  @include mdc-button-filled-accessible(#FF9800);
-}
 
-#greeting-form > button {
-  margin-top: 8px;
-}
-/* 
- // Using the whole library
 @import "material-components-web/material-components-web";
- */

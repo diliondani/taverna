@@ -1,15 +1,25 @@
 {{define "header"}}
-<header>
-    <nav>
-        <button>
-            <svg class="icon icon-sm-in">
-                <use xlink:href="#inbox"></use>
-            </svg>
-        </button>
-        <button>Inbox</button>
-        <button>Sent</button>
-        <button>Trash</button>
-    </nav>
-    <button>Settings</button>
+
+<header class="mdc-toolbar mdc-toolbar--fixed">
+  <div class="mdc-toolbar__row">
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-start mdc-toolbar__section--shrink-to-fit">
+        <a class="mdc-toolbar__icon" href="https://tripadvisor.com">
+            <i class="fab fa-tripadvisor">tripadvisor</i>
+        </a>
+        <a class="mdc-toolbar__icon" href="https://twitter.com">
+            <i class=".mdc-toolbar__icon fab fa-twitter">twitter</i>
+        </a>
+        <a class="mdc-toolbar__icon" href="https://facebook.com">
+            <i class="fab fa-facebook-f .mdc-toolbar__icon">facebook-f</i>
+        </a>
+    </section>
+    <section class="mdc-toolbar__section">
+      <span class="mdc-toolbar__title">Taverna.cat</span>
+    </section>
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-end">
+        <a class="mdc-toolbar__menu-icon" href="/about"> El menú</a>
+    </section>
+  </div>
 </header>
-{{end}}
+
+{{end}} 

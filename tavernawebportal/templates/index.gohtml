@@ -1,96 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Greeting App</title>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
-    <link
-      rel="stylesheet"
-      href="public/style.css">
-  
-  <style>
-    :root {
-        --mdc-theme-primary: #0e4ead;
-    }
-   </style>
-</head>
-<body>
+<html class="mdc-typography">
 
-{{template "svgs"}}
+{{template "head"}}
 
-{{template "header"}}
+  <body class="mdc-typography">
+    {{template "header"}}
+    <h1 class="mdc-toolbar-fixed-adjust mdc-typography--headline mdc-typography-adjust-margin(headline)">Cuina Tradicional Catalana en Blanes - Costa Brava</h1>
+    <i class="fab fa-user"></i>
+    <div class="cards">
+      <div class="mdc-card element-card earth">
+        <section class="mdc-card__media mdc-theme--primary-bg">
+          <h2 class="mdc-card__title mdc-card__title--large mdc-theme--text-primary-on-primary">Earth</h2>
+          <h3 class="mdc-card__subtitle mdc-theme--text-primary-on-primary">A solid decision.</h3>
+        </section>
+        <section class="mdc-card__supporting-text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </section>
+      </div>
 
-    <h1 class="mdc-typography--display1">Hello, World!</h1>
-        <button type="button" class="mdc-button mdc-button--raised">
-            Press Me
-        </button>
+      <div class="mdc-card element-card wind">
+        <section class="mdc-card__media mdc-theme--primary-bg">
+          <h2 class="mdc-card__title mdc-card__title--large mdc-theme--text-primary-on-primary">Wind</h2>
+          <h3 class="mdc-card__subtitle mdc-theme--text-primary-on-primary">Stormy weather ahead.</h3>
+        </section>
+        <section class="mdc-card__supporting-text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </section>
+      </div>
 
-    <main>
-        <h1 class="mdc-typography--display1">Tell us about yourself!</h1>
+      <div class="mdc-card element-card fire">
+        <section class="mdc-card__media mdc-theme--primary-bg">
+          <h2 class="mdc-card__title mdc-card__title--large mdc-theme--text-primary-on-primary">Fire</h2>
+          <h3 class="mdc-card__subtitle mdc-theme--text-primary-on-primary">Hot-headed much?</h3>
+        </section>
+        <section class="mdc-card__supporting-text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </section>
+      </div>
 
-        <form action="#" id="greeting-form">
-            <div>
-            <div class="mdc-form-field">
-                <div class="mdc-textfield" data-mdc-auto-init="MDCTextfield">
-                <input id="firstname" type="text" class="mdc-textfield__input">
-                <label for="firstname" class="mdc-textfield__label">
-                    First Name
-                </label>
-                <div class="mdc-textfield__bottom-line"></div>
-                </div>
-            </div>
+      <div class="mdc-card element-card water">
+        <section class="mdc-card__media mdc-theme--primary-bg">
+          <h2 class="mdc-card__title mdc-card__title--large mdc-theme--text-primary-on-primary">Water</h2>
+          <h3 class="mdc-card__subtitle mdc-theme--text-primary-on-primary">Go with the flow.</h3>
+        </section>
+        <section class="mdc-card__supporting-text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </section>
+      </div>
+    </div>
+    <button class="mdc-fab material-icons" id="demo-absolute-fab" aria-label="Favorite">
+      <span class="mdc-fab__icon">
+        favorite
+      </span>
+    </button>
+  </body>
+</html>
 
-            <div class="mdc-form-field">
-                <div class="mdc-textfield" data-mdc-auto-init="MDCTextfield">
-                <input id="lastname" type="text" class="mdc-textfield__input">
-                <label for="lastname" class="mdc-textfield__label">
-                    Last Name
-                </label>
-                <div class="mdc-textfield__bottom-line"></div>
-                </div>
-            </div>
-            </div>
 
-        <button type="submit"
-                class="mdc-button
-                    mdc-button--raised
-                    mdc-ripple-surface"
-                data-mdc-auto-init="MDCRipple">
-        Print Greeting
-        </button>
-    </form>
-
-    <!-- The p element below is where we'll eventually output our greeting -->
-    <p class="mdc-typography--headline" id="greeting"></p>
-    </main>
-</body>
-
-<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-<script>window.mdc.autoInit();</script>
-<script>
-  document.getElementById('greeting-form').addEventListener('submit', function(evt) {
-    evt.preventDefault();
-    var firstname = evt.target.elements.firstname.value;
-    var lastname = evt.target.elements.lastname.value;
-    var greeting = 'Hello';
-    if (firstname || lastname) {
-      greeting += ', ';
-      if (firstname && lastname) {
-        greeting += firstname + ' ' + lastname;
-      } else if (lastname) {
-        greeting += 'Mx. ' + lastname;
-      } else {
-        greeting += firstname;
-      }
-    }
-    greeting += '!';
-
-    document.getElementById('greeting').textContent = greeting;
-  });
-</script>
 {{template "btf"}}
 
 {{template "footer"}}
+
+</body>
+</html>
