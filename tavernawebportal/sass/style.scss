@@ -9,12 +9,12 @@ $mdc-theme-background: #fff;
 @import "material-components-web/material-components-web";
 //lang-nav
 //vars
-$fg:#00bcd4;
-$bg:#673ab7;
+$fg:$gold;
+$bg:$forest;
 $pi:3.14;
 //config
 $menu-items:4;
-$open-distance:105px;
+$open-distance:60px;
 $opening-angle:$pi*2;
 %goo {
   filter: url('#shadowed-goo'); // debug 
@@ -28,7 +28,7 @@ $opening-angle:$pi*2;
   height: 51px; //margin-left:-40px;
   position: absolute;
   top: 20px;
-  color: white;
+  color: var(--mdc-theme---mdc-theme-secondary, rgba(0, 0, 0, 0.87));
   text-align: center;
   line-height: 48px;
   margin: auto;
@@ -50,45 +50,6 @@ $opening-angle:$pi*2;
   margin-top: 0.9rem;
 }
 
-.hamburger {
-  $width: 25px;
-  $height: 3px;
-  width: $width;
-  height: $height;
-  background: white;
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -$width/2;
-  margin-top: -$height/2;
-  transition: transform 200ms;
-}
-
-$hamburger-spacing:8px;
-.hamburger-1 {
-  transform: translate3d(0, -$hamburger-spacing, 0);
-}
-
-.hamburger-2 {
-  transform: translate3d(0, 0, 0);
-}
-
-.hamburger-3 {
-  transform: translate3d(0, $hamburger-spacing, 0);
-}
-
-.menu-open:checked+.menu-open-button {
-  .hamburger-1 {
-    transform: translate3d(0, 0, 0) rotate(45deg);
-  }
-  .hamburger-2 {
-    transform: translate3d(0, 0, 0) scale(0.1, 1);
-  }
-  .hamburger-3 {
-    transform: translate3d(0, 0, 0) rotate(-45deg);
-  }
-}
 
 .menu {
   @extend %goo;
@@ -117,10 +78,14 @@ $hamburger-spacing:8px;
   font-size: 20px;
   text-align: left;
 }
+.menu-item-selected {
+  background: $forest;
+  color: $fg;
+}
 
 .menu-item {
   &:hover {
-    background: white;
+    background: $forest;
     color: $fg;
   }
   @for $i from 1 through $menu-items {
@@ -178,7 +143,7 @@ $hamburger-spacing:8px;
   @for $i from 1 through $menu-items {
     &:nth-child(#{$i+2}) {
       transition-duration: 90ms+(100ms*$i);
-      transform: translate3d(-110px*$i, 0, 0);
+      transform: translate3d(-$open-distance*$i, 0, 0);
     }
   }
 }

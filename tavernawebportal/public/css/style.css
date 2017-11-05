@@ -8755,13 +8755,13 @@ a.mdc-list-item {
   filter: url("#shadowed-goo"); }
 
 .menu-item, .menu-open-button {
-  background: #00bcd4;
+  background: #c99e10;
   border-radius: 100%;
   width: 51px;
   height: 51px;
   position: absolute;
   top: 20px;
-  color: white;
+  color: var(--mdc-theme---mdc-theme-secondary, rgba(0, 0, 0, 0.87));
   text-align: center;
   line-height: 48px;
   margin: auto;
@@ -8775,34 +8775,6 @@ a.mdc-list-item {
   position: absolute;
   margin-left: -0.72rem;
   margin-top: 0.9rem; }
-
-.hamburger {
-  width: 25px;
-  height: 3px;
-  background: white;
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -12.5px;
-  margin-top: -1.5px;
-  transition: transform 200ms; }
-
-.hamburger-1 {
-  transform: translate3d(0, -8px, 0); }
-
-.hamburger-2 {
-  transform: translate3d(0, 0, 0); }
-
-.hamburger-3 {
-  transform: translate3d(0, 8px, 0); }
-
-.menu-open:checked + .menu-open-button .hamburger-1 {
-  transform: translate3d(0, 0, 0) rotate(45deg); }
-.menu-open:checked + .menu-open-button .hamburger-2 {
-  transform: translate3d(0, 0, 0) scale(0.1, 1); }
-.menu-open:checked + .menu-open-button .hamburger-3 {
-  transform: translate3d(0, 0, 0) rotate(-45deg); }
 
 .menu {
   display: -webkit-box;
@@ -8828,9 +8800,13 @@ a.mdc-list-item {
   font-size: 20px;
   text-align: left; }
 
+.menu-item-selected {
+  background: #1e434c;
+  color: #c99e10; }
+
 .menu-item:hover {
-  background: white;
-  color: #00bcd4; }
+  background: #1e434c;
+  color: #c99e10; }
 .menu-item:nth-child(3) {
   transition-duration: 180ms; }
 .menu-item:nth-child(4) {
@@ -8876,15 +8852,15 @@ a.mdc-list-item {
   transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); }
   .menu-open:checked ~ .menu-item:nth-child(3) {
     transition-duration: 190ms;
-    transform: translate3d(-110px, 0, 0); }
+    transform: translate3d(-60px, 0, 0); }
   .menu-open:checked ~ .menu-item:nth-child(4) {
     transition-duration: 290ms;
-    transform: translate3d(-220px, 0, 0); }
+    transform: translate3d(-120px, 0, 0); }
   .menu-open:checked ~ .menu-item:nth-child(5) {
     transition-duration: 390ms;
-    transform: translate3d(-330px, 0, 0); }
+    transform: translate3d(-180px, 0, 0); }
   .menu-open:checked ~ .menu-item:nth-child(6) {
     transition-duration: 490ms;
-    transform: translate3d(-440px, 0, 0); }
+    transform: translate3d(-240px, 0, 0); }
 
 /*# sourceMappingURL=style.css.map */

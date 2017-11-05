@@ -1,28 +1,37 @@
 {{define "lang-nav"}}
-<button class="mdc-fab material-icons" id="demo-absolute-fab" aria-label="Language">
-      <span class="mdc-fab__icon">
-        language
-      </span>
-</button>
 
-<nav class="menu">
+<nav class="menu" id="language-menu">
   <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
   
   <label class="menu-open-button" for="menu-open">
-  <!--  <span class="hamburger hamburger-1"></span>
-    <span class="hamburger hamburger-2"></span>
-    <span class="hamburger hamburger-3"></span>
-  -->
     <span class="material-icons lang-icon" aria-label="Language">language</span>  
     <span class="material-icons menu-close-icon" aria-label="Close">highlight_off</span>
   </label> 
-  
-  
-  
-  <a href="#" class="menu-item"> <i class="fa fa-bar-chart"></i> </a>
-  <a href="#" class="menu-item"> <i class="fa fa-plus"></i> </a>
-  <a href="#" class="menu-item"> <i class="fa fa-heart"></i> </a>
-  <a href="#" class="menu-item"> <i class="fa fa-envelope"></i> </a>
+
+  <a href="#" class="menu-item menu-item-selected"> 
+    <span class="fa-layers">
+      <i class="fal fa-flag" data-fa-transform="grow-10"></i>
+      <span title="Català" class="fa-layers-text" data-fa-transform="shrink-6 up-2">CAT</span>
+    </span> 
+  </a>
+  <a href="/es/index.html" class="menu-item"> 
+    <span class="fa-layers">
+        <i class="fal fa-flag" data-fa-transform="grow-10"></i>
+        <span title="Español" class="fa-layers-text" data-fa-transform="shrink-6 up-2">ESP</span>
+    </span>
+  </a>
+  <a href="/en/index.html" class="menu-item"> 
+    <span class="fa-layers">
+        <i class="fal fa-flag" data-fa-transform="grow-10"></i>
+        <span title="English" class="fa-layers-text" data-fa-transform="shrink-6 up-2">ENG</span>
+    </span> 
+  </a>
+  <a href="/fr/index.html" class="menu-item"> 
+    <span class="fa-layers">
+      <i class="fal fa-flag" data-fa-transform="grow-10"></i>
+      <span title="Français" class="fa-layers-text" data-fa-transform="shrink-6 up-2">FRE</span>
+    </span> 
+  </a>
   
   
 </nav>

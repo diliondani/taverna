@@ -20,6 +20,9 @@ func RunWebPortal(addr string) error {
 
 	http.HandleFunc("/", roothandler)
 	http.HandleFunc("/public/", fileServer)
+	http.HandleFunc("/en/", englishHandler)
+	http.HandleFunc("/es/", spanishHandler)
+	http.HandleFunc("/fr/", frenchHandler)
 	http.HandleFunc("/favicon.ico", favicon)
 	http.HandleFunc("/manifest.json", manifest)
 	http.HandleFunc("/browserconfig.xml", browserConfig)
@@ -90,4 +93,36 @@ func browserConfig(w http.ResponseWriter, r *http.Request) {
 	defer file.Close()
 	w.Header().Set("Cache-Control", "public, max-age:31536000")
 	http.ServeContent(w, r, name, time.Now(), file)
+}
+
+func englishHandler(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Cache-Control", "public, max-age:604800")
+
+	/* err := tpl.ExecuteTemplate(w, "index.gohtml", nil)
+	if err != nil {
+		log.Fatalln("template didn't execute: ", err)
+	} */
+
+	fmt.Fprintf(w, "Welcome to the English Taverna web portal %s", r.RemoteAddr)
+}
+
+func spanishHandler(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Cache-Control", "public, max-age:604800")
+
+	/* err := tpl.ExecuteTemplate(w, "index.gohtml", nil)
+	if err != nil {
+		log.Fatalln("template didn't execute: ", err)
+	} */
+
+	fmt.Fprintf(w, "Welcome to the Spanish Taverna web portal %s", r.RemoteAddr)
+}
+func frenchHandler(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Cache-Control", "public, max-age:604800")
+
+	/* err := tpl.ExecuteTemplate(w, "index.gohtml", nil)
+	if err != nil {
+		log.Fatalln("template didn't execute: ", err)
+	} */
+
+	fmt.Fprintf(w, "Welcome to the French Taverna web portal %s", r.RemoteAddr)
 }
