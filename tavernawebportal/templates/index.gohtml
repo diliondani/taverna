@@ -3,10 +3,9 @@
 
 {{template "head"}}
 
-  <body class="mdc-typography">
+  <body>
     {{template "header"}}
     <h1 class="mdc-toolbar-fixed-adjust mdc-typography--headline mdc-typography-adjust-margin(headline)">Cuina Tradicional Catalana en Blanes - Costa Brava</h1>
-    <i class="fab fa-user"></i>
     <div class="cards">
       <div class="mdc-card element-card earth">
         <section class="mdc-card__media mdc-theme--primary-bg">
@@ -52,18 +51,13 @@
         </section>
       </div>
     </div>
-    <button class="mdc-fab material-icons" id="demo-absolute-fab" aria-label="Favorite">
-      <span class="mdc-fab__icon">
-        favorite
-      </span>
-    </button>
+    
+    {{template "lang-nav"}}
+  
+
+    {{template "btf"}}
+
+    {{template "footer"}}
+
   </body>
-</html>
-
-
-{{template "btf"}}
-
-{{template "footer"}}
-
-</body>
 </html>
